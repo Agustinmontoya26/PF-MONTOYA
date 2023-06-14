@@ -1,0 +1,135 @@
+
+@import "./base/reset";
+@import "./layout/footer";
+@import "./layout/header";
+@import "./utilities/mixins";
+@import "./utilities/variables";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap');
+@import "./layout/contacto";
+@import "./layout/menu";
+@import "./layout/nosotros";
+@import "./layout/ubicacion";
+
+
+h1, h2, h3, h4, p{
+    @include font
+}
+
+.container-fluid{
+    background-color: $color-primary;
+    flex-direction: row-reverse;
+}
+
+.logo{
+    width: 200px;
+}
+
+.items{
+    justify-content: flex-end;
+}
+
+.navbar{
+    padding: 0;
+}
+
+.nav-link:hover{
+    border: 2px solid $color-secundary;
+    color: $color-secundary;
+}
+
+.hero-container{
+    height: 600px;
+    background-image: url(../assets/img/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero{
+    background-color: #020024a1;
+    text-align: center;
+    color: $color-secundary;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.visit{
+    background-color: $color-primary;
+    height: 1200px;
+}
+
+.cocina{
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+    margin-left: 20%;
+    border: solid black 2px;
+}
+
+.text{
+    width: 200px;
+    height: 300px;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+@media (min-width:600px) and (orientation: landscape){
+    .descripcion{
+        flex-flow: row wrap;}
+
+    .cocina{
+        width: 450px;
+        height: 300px;
+        margin-left: 10%;
+    }
+
+    .text{
+        width: 400px;
+        height: 150px;
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+}
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nosotros-image{
+    width: 200px;
+    height: 200px;
+    margin-top: 25px;
+    margin-left: 20%;
+    border: solid black 2px;
+}
+
+.nosotros-text{
+    width: 200px;
+    height: 300px;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+@media (min-width:600px) and (orientation: landscape){
+    .nosotros{
+        flex-flow: row wrap;
+    }
+
+    .nosotros-image{
+        width: 500px;
+        height: 300px;
+        margin-left: 10%;
+    }
+
+    .nosotros-text{
+        width: 600px;
+        height: 150px;
+        margin-left: 10%;
+        margin-top: 10px;
+    }
+}
